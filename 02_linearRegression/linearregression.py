@@ -38,6 +38,7 @@ def linearfeatures(X):
 def quadraticfeatures(X):
 
     # generate quadratic featues
+    #X = concatenate([mat(append([[1],xi],(xi.T*xi).flatten())) for xi in X])
     X = concatenate([mat(append([xi],(xi.T*xi).flatten())) for xi in X])
 
     return linearfeatures(X)
